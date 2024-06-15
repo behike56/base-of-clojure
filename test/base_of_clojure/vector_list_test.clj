@@ -3,9 +3,45 @@
   [clojure.test :refer :all]
   [base-of-clojure.vector-list :refer :all]))
 
-(deftest a-test
-  (testing "FIXME, I fail."
-    (is (= [4 5 6] (make_vec [1 2 3])))))
+(deftest make_vec-test
+  (testing "vectorのテスト"
+    (is (= [4 5 6 [1 2 3]] (make_vec [1 2 3])))))
+
+(deftest make_vec2-test
+  (testing "vecのテスト。"
+    (is (= [1 2 3] (make_vec2 '(1 2 3))))
+    (is (= [1 2 3] (make_vec2 (sorted-set 1 2 3))))
+    (is (= [[:a 1] [:b 2] [:c 3]] (make_vec2 {:a 1 :b 2 :c 3})))))
+
+(deftest make_vec3-test
+  (testing "vector-ofのテスト"
+    (is (= [1 2 3] (make_vec3 :int)))))
+
+;;;  Examine a vector
+
+(deftest examine_vec1-test
+  (testing "getのテスト"
+    (is (= 10 (examine_vec1 4)))))
+
+(deftest examine_vec1-test
+  (testing "getのテスト"
+    (is (= "not-found" (examine_vec1-1 5)))))
+
+(deftest examine_vec2-test
+  (testing "のテスト"
+    (is (= [1 2 3] (examine_vec2 :int)))))
+
+(deftest examine_vec3-test
+  (testing "のテスト"
+    (is (= [1 2 3] (examine_vec3 :int)))))
+
+(deftest examine_vec4-test
+  (testing "のテスト"
+    (is (= [1 2 3] (examine_vec4 :int)))))
+
+(deftest examine_vec5-test
+  (testing "のテスト"
+    (is (= [1 2 3] (examine_vec5 :int)))))
 
 (deftest make_list-test
   (testing ""
@@ -31,3 +67,5 @@
     (let [limit 0
           result (make_repeatedly_list limit)]
       (is (empty? result) "The result should be an empty list when limit is 0"))))
+
+(run-tests)
