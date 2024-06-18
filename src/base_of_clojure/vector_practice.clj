@@ -76,31 +76,44 @@
 ;;; 'change' a vector: assoc pop subvec replace
 
 (defn change_assoc_vector1
-  "assoc: "
+  "assoc: assoc[iate]。マップに適用すると、同じ（ハッシュ化された/ソートされた）
+   型の新しいマップを返します。vectorに適用すると、valをindexに含む新しいvectorを返します。
+   注意 - indexは<=(count vector)でなければなりません。"
   [map key val]
   (assoc map key val))
 
 (defn change_assoc_vector2
-  "assoc: "
+  "assoc: assoc[iate]。マップに適用すると、同じ（ハッシュ化された/ソートされた）
+   型の新しいマップを返します。vectorに適用すると、valをindexに含む新しいvectorを返します。
+   注意 - indexは<=(count vector)でなければなりません。"
   [map key kvs]
   (assoc map key kvs))
 
 (defn change_pop_vector
-  "pop: "
+  "pop: リストまたはキューの場合は、最初の項目を除いた新しいリスト/キューを返し、
+   ベクトルの場合は、最後の項目を除いた新しいベクトルを返します。
+   コレクションが空の場合は例外をスローします。
+   注意 - next/butlastとは異なります。"
   [coll]
   (pop coll))
 
 (defn change_subvec_vector1
-  "subvec: "
+  "subvec: vector 内の項目を start (包含) から end (排他) までの永続ベクトルで返します。
+   end が指定されない場合、デフォルトは (count vector) です。この操作は O(1) であり、非常に高速です。
+   なぜなら、結果のベクトルは元のベクトルと構造を共有し、トリミングが行われないからです。"
   [vec start]
   (subvec vec start))
 
 (defn change_subvec_vector2
-  "subvec: "
+  "subvec: vector 内の項目を start (包含) から end (排他) までの永続ベクトルで返します。
+   end が指定されない場合、デフォルトは (count vector) です。この操作は O(1) であり、非常に高速です。
+   なぜなら、結果のベクトルは元のベクトルと構造を共有し、トリミングが行われないからです。"
   [vec start end]
   (subvec vec start end))
 
 (defn change_replace_vector
-  "replace: "
+  "replace: 置換ペアのマップとベクトル/コレクションが与えられた場合、
+   任意の要素 = smapのキーがsmapの対応するvalで置換されたベクトル/seqを返します。
+   コレクションが提供されない場合、変換器を返します。"
   [coll1 coll2]
   (replace coll1 coll2))
