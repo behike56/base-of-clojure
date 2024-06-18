@@ -1,4 +1,4 @@
-(ns base-of-clojure.vector-list
+(ns base-of-clojure.vector-practice
   "ベクター型とリスト型の操作方法")
 
 ;;;; Vectors Related Functions
@@ -39,13 +39,13 @@
   "get: 連想コレクション、集合、文字列、配列、または ILookup 
         インスタンスにキーが存在しない場合は、not-found または nil を返します。"
   [index]
-  (get index examine_vec))
+  (get examine_vec index))
 
 (defn examine_vec1-1
   "get: 連想コレクション、集合、文字列、配列、または ILookup 
         インスタンスにキーが存在しない場合は、not-found または nil を返します。"
   [index]
-  (get index examine_vec "not-found"))
+  (get examine_vec index "not-found"))
 
 (defn examine_vec2
   "nth: getはインデックスが範囲外の場合nilを返し、 nthはnot-foundが与えられない限り例外を投げる。 
@@ -73,30 +73,34 @@
   [x]
   (vector? x))
 
-;;; 'change' a vector
+;;; 'change' a vector: assoc pop subvec replace
 
-;;;; Lists Related Functions
-;;; Related functions
-;;; Create a list: list list*
-;;; Treat a list like a stack: peek pop
-;;; Examine a list: list?
+(defn change_assoc_vector1
+  "assoc: "
+  [map key val]
+  (assoc map key val))
 
-(defn make_list
-  "range: 第1引数から、第2引数まで(`num`)の整数を順番に返す。"
-  [num]
-  (range 1 num))
+(defn change_assoc_vector2
+  "assoc: "
+  [map key kvs]
+  (assoc map key kvs))
 
-(defn make_repeat_list
-  "repeat: 引数に与えられた要素を繰り返したリストを返す。"
-  [str]
-  (repeat 4 str))
+(defn change_pop_vector
+  "pop: "
+  [coll]
+  (pop coll))
 
-(defn make_repeatedly_list
-  "repeatedly: 無限（与えられた場合は長さn）の遅延呼び出しシーケンスを返す。"
-  [limit]
-  (repeatedly limit #(rand-int 11)))
+(defn change_subvec_vector1
+  "subvec: "
+  [vec start]
+  (subvec vec start))
 
-(defn make_replace_vector
-  ""
-  [map]
-  ())
+(defn change_subvec_vector2
+  "subvec: "
+  [vec start end]
+  (subvec vec start end))
+
+(defn change_replace_vector
+  "replace: "
+  [coll1 coll2]
+  (replace coll1 coll2))
