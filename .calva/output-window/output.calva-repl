@@ -36,8 +36,8 @@ You can configure this with the setting:
 ;   - See https://calva.io/connect-sequences/
 ; 
 
-; Starting Jack-in Terminal: (cd /Users/behike56/00-Development/000-repo/base-of-clojure; lein update-in :dependencies conj '[nrepl,"1.1.1"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.47.1"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- repl :headless)
-; Using host:port 127.0.0.1:53932 ...
+; Starting Jack-in Terminal: (cd /Volumes/CODE/00-Development/000-repo/base-of-clojure; lein update-in :dependencies conj '[nrepl,"1.1.1"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.47.1"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- repl :headless)
+; Using host:port 127.0.0.1:55996 ...
 ; Hooking up nREPL sessions ...
 ; Connected session: clj
 ; Evaluating code from settings: 'calva.autoEvaluateCode.onConnect.clj'
@@ -48,7 +48,259 @@ about why stdout printed to this file is prepended with `;` to be line comments.
 clj꞉base-of-clojure.core꞉> 
 ; Jack-in done.
 clj꞉base-of-clojure.core꞉> 
-{:key1 {:key2 "abc"}}
-clj꞉base-of-clojure.vector-practice-test꞉> 
-{:key1 {:key2 "abc"}}
-clj꞉base-of-clojure.vector-practice-test꞉> 
+; Syntax error compiling at (src/base_of_clojure/core.clj:14:1).
+; Unable to resolve symbol: foo in this context
+clj꞉base-of-clojure.core꞉> 
+; Syntax error compiling at (src/base_of_clojure/core.clj:11:1).
+; Unable to resolve symbol: add in this context
+clj꞉base-of-clojure.core꞉> 
+; Syntax error compiling at (src/base_of_clojure/core.clj:11:1).
+; Unable to resolve symbol: add in this context
+clj꞉base-of-clojure.core꞉> 
+; Syntax error compiling at (src/base_of_clojure/core.clj:11:1).
+; Unable to resolve symbol: add in this context
+clj꞉base-of-clojure.core꞉> 
+; Syntax error compiling at (src/base_of_clojure/core.clj:9:3).
+; No such namespace: fr
+clj꞉base-of-clojure.core꞉> 
+; Syntax error compiling at (src/base_of_clojure/paly.clj:5:1).
+; Unable to resolve symbol: addition in this context
+clj꞉base-of-clojure.paly꞉> 
+; Syntax error compiling at (src/base_of_clojure/paly.clj:5:1).
+; Unable to resolve symbol: addition in this context
+clj꞉base-of-clojure.paly꞉> 
+; Syntax error compiling at (src/base_of_clojure/paly.clj:5:1).
+; Unable to resolve symbol: addition in this context
+clj꞉base-of-clojure.paly꞉> 
+; Syntax error compiling at (src/base_of_clojure/paly.clj:1:8525).
+; Unable to resolve symbol: addition in this context
+clj꞉base-of-clojure.paly꞉> 
+; Syntax error compiling at (src/base_of_clojure/paly.clj:5:1).
+; Unable to resolve symbol: addition in this context
+clj꞉base-of-clojure.paly꞉> 
+; Syntax error compiling at (src/base_of_clojure/paly.clj:5:1).
+; Unable to resolve symbol: addition in this context
+clj꞉base-of-clojure.paly꞉> 
+; Syntax error compiling at (src/base_of_clojure/paly.clj:5:1).
+; Unable to resolve symbol: addition in this context
+clj꞉base-of-clojure.paly꞉> 
+; Syntax error compiling at (src/base_of_clojure/paly.clj:5:1).
+; Unable to resolve symbol: addition in this context
+clj꞉base-of-clojure.paly꞉> 
+; Syntax error compiling at (src/base_of_clojure/paly.clj:5:1).
+; Unable to resolve symbol: addition in this context
+clj꞉base-of-clojure.paly꞉> 
+; Syntax error compiling at (src/base_of_clojure/paly.clj:5:1).
+; Unable to resolve symbol: addition in this context
+clj꞉base-of-clojure.paly꞉> 
+; nREPL Connection was closed
+; Jacking in...
+; Connecting using "Leiningen" project type.
+; You can make Calva auto-select this.
+;   - See https://calva.io/connect-sequences/
+; 
+
+; Starting Jack-in Terminal: (cd /Volumes/CODE/00-Development/000-repo/base-of-clojure; lein update-in :dependencies conj '[nrepl,"1.1.1"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.47.1"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- repl :headless)
+; Using host:port 127.0.0.1:59017 ...
+; Hooking up nREPL sessions ...
+; Connected session: clj
+; Evaluating code from settings: 'calva.autoEvaluateCode.onConnect.clj'
+nil
+clj꞉base-of-clojure.core꞉> 
+; Jack-in done.
+clj꞉base-of-clojure.core꞉> 
+; Syntax error compiling at (src/base_of_clojure/paly.clj:5:1).
+; Unable to resolve symbol: addition in this context
+clj꞉base-of-clojure.paly꞉> 
+; Jacking in...
+; Connecting using "Leiningen" project type.
+; You can make Calva auto-select this.
+;   - See https://calva.io/connect-sequences/
+; 
+
+; Starting Jack-in Terminal: (cd /Volumes/CODE/00-Development/000-repo/base-of-clojure; lein update-in :dependencies conj '[nrepl,"1.1.1"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.47.1"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- repl :headless)
+; nREPL Connection was closed
+; Using host:port 127.0.0.1:59139 ...
+; Hooking up nREPL sessions ...
+; Connected session: clj
+; Evaluating code from settings: 'calva.autoEvaluateCode.onConnect.clj'
+nil
+clj꞉base-of-clojure.core꞉> 
+; Jack-in done.
+clj꞉base-of-clojure.core꞉> 
+; Syntax error compiling at (src/base_of_clojure/paly.clj:5:1).
+; Unable to resolve symbol: addition in this context
+clj꞉base-of-clojure.paly꞉> 
+; nREPL Connection was closed
+; Jacking in...
+; Connecting using "Leiningen" project type.
+; You can make Calva auto-select this.
+;   - See https://calva.io/connect-sequences/
+; 
+
+; Starting Jack-in Terminal: (cd /Volumes/CODE/00-Development/000-repo/base-of-clojure; lein update-in :dependencies conj '[nrepl,"1.1.1"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.47.1"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- repl :headless)
+; Using host:port 127.0.0.1:59330 ...
+; Hooking up nREPL sessions ...
+; Connected session: clj
+; Evaluating code from settings: 'calva.autoEvaluateCode.onConnect.clj'
+nil
+clj꞉base-of-clojure.core꞉> 
+; Jack-in done.
+clj꞉base-of-clojure.core꞉> 
+; Syntax error compiling at (src/base_of_clojure/paly.clj:5:1).
+; Unable to resolve symbol: addition in this context
+clj꞉base-of-clojure.paly꞉> 
+; Syntax error compiling at (src/base_of_clojure/paly.clj:5:1).
+; Unable to resolve symbol: addition in this context
+clj꞉base-of-clojure.paly꞉> 
+; Evaluating file: paly.clj
+false
+clj꞉base-of-clojure.paly꞉> 
+false
+clj꞉base-of-clojure.paly꞉> 
+false
+clj꞉base-of-clojure.paly꞉> 
+; nREPL Connection was closed
+; Jacking in...
+; Connecting using "Leiningen" project type.
+; You can make Calva auto-select this.
+;   - See https://calva.io/connect-sequences/
+; 
+
+; Starting Jack-in Terminal: (cd /Volumes/CODE/00-Development/000-repo/base-of-clojure; lein update-in :dependencies conj '[nrepl,"1.1.1"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.47.1"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- repl :headless)
+; Using host:port 127.0.0.1:59688 ...
+; Hooking up nREPL sessions ...
+; Connected session: clj
+; Evaluating code from settings: 'calva.autoEvaluateCode.onConnect.clj'
+nil
+clj꞉base-of-clojure.core꞉> 
+; Jack-in done.
+clj꞉base-of-clojure.core꞉> 
+; Syntax error compiling at (src/base_of_clojure/paly.clj:5:1).
+; Unable to resolve symbol: addition in this context
+clj꞉base-of-clojure.paly꞉> 
+; Syntax error compiling at (src/base_of_clojure/core.clj:9:3).
+; No such namespace: fr
+clj꞉base-of-clojure.core꞉> 
+; Syntax error compiling at (src/base_of_clojure/core.clj:9:3).
+; No such namespace: fr
+clj꞉base-of-clojure.core꞉> 
+; Syntax error compiling at (src/base_of_clojure/core.clj:11:3).
+; Unable to resolve symbol: add in this context
+clj꞉base-of-clojure.core꞉> 
+; Syntax error compiling at (src/base_of_clojure/paly.clj:5:1).
+; Unable to resolve symbol: addition in this context
+clj꞉base-of-clojure.paly꞉> 
+; nREPL Connection was closed
+; Connecting using "Leiningen" project type.
+; You can make Calva auto-select this.
+;   - See https://calva.io/connect-sequences/
+; 
+
+; Connecting ...
+; Reading port file: file:///Volumes/CODE/00-Development/000-repo/base-of-clojure/.nrepl-port ...
+; Using host:port localhost:59688 ...
+; Hooking up nREPL sessions ...
+; Connected session: clj
+; Evaluating code from settings: 'calva.autoEvaluateCode.onConnect.clj'
+nil
+clj꞉base-of-clojure.core꞉> 
+; Syntax error compiling at (src/base_of_clojure/paly.clj:5:1).
+; Unable to resolve symbol: addition in this context
+clj꞉base-of-clojure.paly꞉> 
+; Syntax error compiling at (src/base_of_clojure/paly.clj:5:1).
+; Unable to resolve symbol: addition in this context
+clj꞉base-of-clojure.paly꞉> 
+; Jacking in...
+; Connecting using "Leiningen" project type.
+; You can make Calva auto-select this.
+;   - See https://calva.io/connect-sequences/
+; 
+
+; Starting Jack-in Terminal: (cd /Volumes/CODE/00-Development/000-repo/base-of-clojure; lein update-in :dependencies conj '[nrepl,"1.1.1"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.47.1"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- repl :headless)
+; nREPL Connection was closed
+; Using host:port 127.0.0.1:61083 ...
+; Hooking up nREPL sessions ...
+; Connected session: clj
+; Evaluating code from settings: 'calva.autoEvaluateCode.onConnect.clj'
+nil
+clj꞉base-of-clojure.core꞉> 
+; Jack-in done.
+clj꞉base-of-clojure.core꞉> 
+; Evaluating file: paly.clj
+false
+clj꞉base-of-clojure.paly꞉> 
+false
+clj꞉base-of-clojure.paly꞉> 
+false
+clj꞉base-of-clojure.paly꞉> 
+false
+clj꞉base-of-clojure.paly꞉> 
+; Evaluating file: paly.clj
+nil
+clj꞉base-of-clojure.paly꞉> 
+7
+clj꞉base-of-clojure.paly꞉> 
+7
+clj꞉base-of-clojure.paly꞉> 
+; Evaluating file: paly.clj
+7
+clj꞉base-of-clojure.paly꞉> 
+; Evaluating file: paly.clj
+7
+clj꞉base-of-clojure.paly꞉> 
+; Evaluating file: paly.clj
+7
+clj꞉base-of-clojure.paly꞉> 
+7
+clj꞉base-of-clojure.paly꞉> 
+; nREPL Connection was closed
+; Jacking in...
+; Connecting using "Leiningen" project type.
+; You can make Calva auto-select this.
+;   - See https://calva.io/connect-sequences/
+; 
+
+; Starting Jack-in Terminal: (cd /Volumes/CODE/00-Development/000-repo/base-of-clojure; lein update-in :dependencies conj '[nrepl,"1.1.1"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.47.1"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- repl :headless)
+; Using host:port 127.0.0.1:50700 ...
+; Hooking up nREPL sessions ...
+; Connected session: clj
+; Evaluating code from settings: 'calva.autoEvaluateCode.onConnect.clj'
+nil
+clj꞉base-of-clojure.core꞉> 
+; Jack-in done.
+clj꞉base-of-clojure.core꞉> 
+; Syntax error compiling at (src/base_of_clojure/paly.clj:15:1).
+; Unable to resolve symbol: message? in this context
+clj꞉base-of-clojure.paly꞉> 
+; Syntax error compiling at (src/base_of_clojure/paly.clj:8:1).
+; Unable to resolve symbol: addition in this context
+clj꞉base-of-clojure.paly꞉> 
+; Evaluating file: paly.clj
+; a
+nil
+clj꞉base-of-clojure.paly꞉> 
+7
+clj꞉base-of-clojure.paly꞉> 
+; a
+nil
+clj꞉base-of-clojure.paly꞉> 
+; this is not message.
+nil
+clj꞉base-of-clojure.paly꞉> 
+; Evaluating file: paly.clj
+; a
+nil
+clj꞉base-of-clojure.paly꞉> 
+; a
+nil
+clj꞉base-of-clojure.paly꞉> 
+nil
+clj꞉base-of-clojure.paly꞉> 
+; Evaluating file: paly.clj
+; b
+nil
+clj꞉base-of-clojure.paly꞉> 
+; b
+nil
+clj꞉base-of-clojure.paly꞉> 
