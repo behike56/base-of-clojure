@@ -1,6 +1,6 @@
 (ns base-of-clojure.algorythm.WarmupLvl)
 
-(defn staircase
+(defn sharpcase
   "底辺と高さはともにnに等しく、#記号と空白を使って描かれる。
    最後の行には空白を入れない。
    大きさ n の階段を表示する。
@@ -14,7 +14,7 @@
           star (apply str (repeat i "#"))]
       (println (str space star)))))
 
-(defn miniMaxSum
+(defn sumMinMax
   "5つの正の整数が与えられたとき5つの整数のうちちょうど
    4つの整数の和で計算できる最小値と最大値を求めよ
    そして，それぞれの最小値と最大値を，
@@ -24,7 +24,7 @@
    (reduce + (subvec (vec (sort arr)) 0 (dec (count arr))))
    (reduce + (subvec (vec (sort arr)) 1))))
 
-(defn birthdayCakeCandles
+(defn calcHighestCandle
   "あなたは子供の誕生日のケーキを担当します。 
    ケーキのろうそくは、その子の年齢の合計ごとに1本と決めている。
    一番高いロウソクを吹き消すことができる。
@@ -41,7 +41,7 @@
             0
             candles)))
 
-(defn timeConversion
+(defn convertTime12to24
   "AM/PMの12時間表示の時刻をミリタリータイム（24時間表示）に変換する。
   
   注: - 12時間時計の12:00:00AMは、24時間時計の00:00:00である。
