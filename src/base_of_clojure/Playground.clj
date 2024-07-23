@@ -2,18 +2,25 @@
   (:require
    [base-of-clojure.algorythm.WarmupLvl :as wul]))
 
+;; 入力値
 (def array [1 3 5 7 9 11 13])
 (def array2 [8 4 9 1 7 2 5 3])
 (def candles [2 1 5 8 8 2])
-(def time-str "12:01:00AM")
+(def time-str1 "12:01:00PM")
+(def time-str2 "12:01:00AM")
 
 ;; 関数呼び出し
-(wul/staircase 6)
+(wul/sharpcase 6)
 
-(wul/miniMaxSum array2)
+(wul/sumMinMax array2)
 
-(wul/birthdayCakeCandles candles)
+(wul/calcHighestCandle candles)
 
+(wul/convertTime12to24 time-str1)
+(wul/convertTime12to24 time-str2)
+
+
+;; ビルトイン関数の動作確認
 (doseq [x array]
   (println x))
 
