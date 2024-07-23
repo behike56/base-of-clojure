@@ -1,5 +1,5 @@
 (ns base-of-clojure.core
-  (:require base-of-clojure.file_reader :as fr))
+  (:require base-of-clojure.filecontroller.file-reader :as fr))
 
 (defn add [a b]
   (+ a b))
