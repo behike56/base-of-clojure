@@ -1,7 +1,7 @@
 (ns base-of-clojure.list-practice-test
   (:require
    [clojure.test :refer :all]
-   [base-of-clojure.list-practice :refer :all]))
+   [base-of-clojure.sequences.list-practice :refer :all]))
 
 
 (deftest make_list-test

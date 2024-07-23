@@ -1,4 +1,4 @@
-(ns base-of-clojure.vector-practice
+(ns base-of-clojure.sequences.vector-practice
   "ベクター型とリスト型の操作方法")
 
 ;;;; Vectors Related Functions

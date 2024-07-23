@@ -1,4 +1,4 @@
-(ns base-of-clojure.list-practice)
+(ns base-of-clojure.sequences.list-practice)
 
 ;;;; Lists Related Functions
 ;;; Related functions

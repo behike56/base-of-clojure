@@ -1,7 +1,7 @@
 (ns base-of-clojure.vector-practice-test
   (:require
   [clojure.test :refer :all]
-  [base-of-clojure.vector-practice :refer :all]))
+  [base-of-clojure.sequences.vector-practice :refer :all]))
 
 (deftest make_vec-test
   (testing "vectorのテスト"

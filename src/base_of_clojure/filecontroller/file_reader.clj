@@ -1,4 +1,4 @@
-(ns base-of-clojure.file-reader
+(ns base-of-clojure.filecontroller.file-reader
   (:require [clojure.java.io :as io]))
 
 (defn file_reader [filepath]
