@@ -77,3 +77,13 @@
                              1
                              0) oranges)))
   )
+
+(defn gradingStudents 
+  "grades: integer[]
+   38~99までの間で、得点に対して次の五の倍数までの差が3未満
+   の場合、繰上げを行う。
+   37以下は処理しない。
+   
+   std-output: 繰り上げた得点を含む全てを標準出力する。"
+  [grades]
+  (print grades))
