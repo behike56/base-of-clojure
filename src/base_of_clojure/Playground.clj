@@ -23,13 +23,16 @@
 ;; ビルトイン関数の動作確認
 (doseq [x array]
   (println x))
-
+;;; 関数定義
 (defn addition [a b] (+ a b))
-
+;;; コメントでの関数呼び出し
 (comment
   (addition 2 5))
+;; => nil
+
 
 (addition 2 5)
+;; => 7
 
 (defn message? [str]
   (if (= str "a")
@@ -38,14 +41,15 @@
 
 (message? "b")
 
-;; (0 1 2 3 4 5 6)
 (range 7)
+;; => (0 1 2 3 4 5 6)
 
-;; ("a" "a" "a" "a")
 (repeat 4 "a")
+;; => ("a" "a" "a" "a")
 
-;; "aaaa"
 (apply str (repeat 4 "a"))
+;; => "aaaa"
+
 
 ; ベクタのソート方法
 ;; sort: 昇順にソートする
@@ -53,6 +57,10 @@
 ;; sort-by関数はソートのキーと比較関数を指定することができ、
 ;; ここではidentity関数をキーに、>を比較関数として降順にソートしています。
 (sort-by identity > array)
+;; => (13 11 9 7 5 3 1)
+
+(sort-by identity < array)
+;; => (1 3 5 7 9 11 13)
 
 ; ベクタの先頭を取り除く
 ;;subvec関数は、引数として開始インデックスとオプションの終了インデックスを取ります。
@@ -87,6 +95,12 @@
       ])
 
 (Integer/parseInt "33")
+;; => 33
+
 (format "%02d" 3)
+;; => "03"
+
 (cond (and true false) "00"
-      (and false true) "00")
+      (and false true) "01"
+      :else "ELSE")
+;; => "ELSE"
