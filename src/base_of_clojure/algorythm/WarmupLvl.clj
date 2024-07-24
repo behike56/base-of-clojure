@@ -58,3 +58,22 @@
                         (and (= period "PM") (= hour-int 12)) "12"
                         :else (format "%02d" (+ hour-int 12)))]
     (str military-hour ":" min ":" sec)))
+
+
+(defn countApplesAndOranges
+  "parameters:
+   1. INTEGER s
+   2. INTEGER t
+   3. INTEGER a
+   4. INTEGER b
+   5. INTEGER_ARRAY apples
+   6. INTEGER_ARRAY oranges"
+  [s t a b apples oranges]
+  (println (reduce + 0 (map #(if (and (>= (+ a %) s) (<= (+ a %) t))
+                             1
+                             0) apples)))
+  
+  (println (reduce + 0 (map #(if (and (>= (+ b %) s) (<= (+ b %) t))
+                             1
+                             0) oranges)))
+  )
