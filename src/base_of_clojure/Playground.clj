@@ -19,7 +19,13 @@
 (wul/convertTime12to24 time-str1)
 (wul/convertTime12to24 time-str2)
 
-(wul/countApplesAndOranges 7 10 4 12 [2 3 -4] [3 -2 -4])
+(def s 7)
+(def t 10)
+(def a 4)
+(def b 12)
+(def arr1 [2 3 -4])
+(def arr2 [3 -2 -4])
+(wul/countApplesAndOranges s t a b arr1 arr2)
 
 ;; ビルトイン関数の動作確認
 (doseq [x array]
@@ -121,30 +127,15 @@
   (print apple_cnt)
   (print orange_cnt))
 
-;; (cond (and (>= (+ a (second arr1)) s) (<= (+ a (second arr1)) t)) (inc apple_cnt))
 
 
-
-(def s 7)
-(def t 10)
-(def a 4)
-(def b 12)
-(def arr1 [2 3 -4])
-(def arr2 [3 -2 -4])
 (def apple_cnt 0)
 (def orange_cnt 0)
 
-(map #(
-       (if (and (>= (+ a %) s) (<= (+ a %) t))
-         (inc apple_cnt)
-         "")) arr1)
-
 (print (reduce + 0 (map #(if (and (>= (+ a %) s) (<= (+ a %) t))
         1 
-         0) arr1)))
+        0) arr1)))
 
-(print (reduce + 0(map #(if (and (>= (+ b %) s) (<= (+ b %) t))
+(print (reduce + 0 (map #(if (and (>= (+ b %) s) (<= (+ b %) t))
         1
         0) arr2)))
-
-(print apple_cnt)
