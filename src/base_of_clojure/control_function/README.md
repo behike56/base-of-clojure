@@ -81,7 +81,8 @@ Clojureには、条件分岐や繰り返し処理を行うためのさまざま�
 1. **`loop` と `recur`**
    - 明示的に再帰を行うために使用します。
    - 使用例:
-     ```clojure
+
+     ``` clojure
      (loop [i 0]
        (when (< i 5)
          (println i)
