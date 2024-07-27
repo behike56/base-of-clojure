@@ -70,15 +70,14 @@
    6. INTEGER_ARRAY oranges"
   [s t a b apples oranges]
   (println (reduce + 0 (map #(if (and (>= (+ a %) s) (<= (+ a %) t))
-                             1
-                             0) apples)))
-  
-  (println (reduce + 0 (map #(if (and (>= (+ b %) s) (<= (+ b %) t))
-                             1
-                             0) oranges)))
-  )
+                               1
+                               0) apples)))
 
-(defn gradingStudents 
+  (println (reduce + 0 (map #(if (and (>= (+ b %) s) (<= (+ b %) t))
+                               1
+                               0) oranges))))
+
+(defn gradingStudents
   "grades: integer[]
    38~99までの間で、得点に対して次の五の倍数までの差が3未満
    の場合、繰上げを行う。
@@ -86,4 +85,16 @@
    
    std-output: 繰り上げた得点を含む全てを標準出力する。"
   [grades]
-  (print grades))
+  (map #(if (> % 37)
+          (let [right_num (subs (format "%d" %) 1)
+                left_num (Integer/parseInt (subs (format "%d" %) 0 1))]
+            (when-let [ones (cond
+                              (or (= right_num "3") (= right_num "4")) "5"
+                              (or (= right_num "8") (= right_num "9")) "0"
+                              (= right_num "0") "ZERO"
+                              :else right_num)]
+              (str (cond
+                     (= ones "5") (str left_num ones)
+                     (= ones "0") (str (+ left_num 1) ones)
+                     :else (str %)))))
+          (str %)) grades))

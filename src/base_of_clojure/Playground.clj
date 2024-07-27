@@ -27,6 +27,20 @@
 (def arr2 [3 -2 -4])
 (wul/countApplesAndOranges s t a b arr1 arr2)
 
+(def grades1 [80 96 18 73 78 60 60 15 45 15 10 5 46 87 33 60 14 71 65 2 5 97 0])
+(def expect1 [80 96 18 75 80 60 60 15 45 15 10 5 46 87 33 60 14 71 65 2 5 97 0])
+(map #(Integer/parseInt %) (wul/gradingStudents grades1))
+;;     80 96 18 73 78 60 60 15 45 15 10 5 46 87 33 60 14 71 65 2 5 97 0
+;; => (90 96 18 75 80 70 70 15 45 15 10 5 46 87 33 70 14 71 65 2 5 97 0)
+;;     80 96 18 75 80 60 60 15 45 15 10 5 46 87 33 60 14 71 65 2 5 97 0
+;; => ("90" "96" "18" "75" "80" "70" "70" "15" "45" "15" "10" "5" "46" "87" "33" "70" "14" "71" "65" "2" "5" "97" "0")
+
+(map #(Integer/parseInt %) '("90" "96" "18" "75" "80"))
+
+(def grades2 [80])
+(wul/gradingStudents grades2)
+
+
 ;; ビルトイン関数の動作確認
 (doseq [x array]
   (println x))
@@ -99,7 +113,7 @@
 
 
 (let [[_ hour min sec period] (re-matches #"(\d{2}):(\d{2}):(\d{2})(AM|PM)" time-str)])
-      
+
 
 (Integer/parseInt "33")
 ;; => 33
@@ -133,42 +147,57 @@
 (def orange_cnt 0)
 
 (print (reduce + 0 (map #(if (and (>= (+ a %) s) (<= (+ a %) t))
-        1 
-        0) arr1)))
+                           1
+                           0) arr1)))
 
 (print (reduce + 0 (map #(if (and (>= (+ b %) s) (<= (+ b %) t))
-        1
-        0) arr2)))
+                           1
+                           0) arr2)))
 
-(def grades [73 67 38 33])
 
-(map #((if (> % 37)
-         (cond
-           (<= % 40) 40
-           (and (>= % 43) (< % 45)) 45
-           (and (>= % 43) (< % 45)) 50
-           (and (>= % 43) (< % 45)) 55
-           (and (>= % 43) (< % 45)) 60
-           (and (>= % 43) (< % 45)) 65
-           (and (>= % 43) (< % 45)) 70
-           (and (>= % 43) (< % 45)) 45
-           ))) grades)
 
-(map #((if (> % 37)
-         (def val_str (subs (format "%d" %) 1))
-         (def tens (subs (format "%d" %) 0 1))
-         (if (= "5" (cond
-           (or (= val_str "3") (= val_str "4")) "5"
-           (or (= val_str "8") (= val_str "9")) "0")) 
-           )
-         
-         (cond
-           (<= % 40) 40
-           (and (>= % 43) (< % 45)) 45
-           (and (>= % 43) (< % 45)) 50
-           (and (>= % 43) (< % 45)) 55
-           (and (>= % 43) (< % 45)) 60
-           (and (>= % 43) (< % 45)) 65
-           (and (>= % 43) (< % 45)) 70
-           (and (>= % 43) (< % 45)) 45))) grades)
+;; (map #((if (> % 37)
+;;          (cond
+;;            (<= % 40) 40
+;;            (and (>= % 43) (< % 45)) 45
+;;            (and (>= % 43) (< % 45)) 50
+;;            (and (>= % 43) (< % 45)) 55
+;;            (and (>= % 43) (< % 45)) 60
+;;            (and (>= % 43) (< % 45)) 65
+;;            (and (>= % 43) (< % 45)) 70
+;;            (and (>= % 43) (< % 45)) 45))) grades)
+
+;; (map #((if (> % 37)
+;;          (def val_str (subs (format "%d" %) 1))
+;;          (def tens (Integer/parseInt (subs (format "%d" %) 0 1)))
+;;          (if (= "5" (cond
+;;                       (or (= val_str "3") (= val_str "4")) "5"
+;;                       (or (= val_str "8") (= val_str "9")) "0"))
+;;            (str tens)))) grades)
+
+;; 73 67 38 33
+(def grades [67 38 33])
+(map println (map #(if (> % 37)
+                     (let [right_num (subs (format "%d" %) 1)
+                           left_num (Integer/parseInt (subs (format "%d" %) 0 1))]
+                       (when-let [ones (cond
+                                         (or (= right_num "3") (= right_num "4")) "5"
+                                         (or (= right_num "8") (= right_num "9")) "0"
+                                         :else right_num)]
+                         (str (cond
+                                (= ones "5") (str left_num ones)
+                                (= ones "0") (str (+ left_num 1) ones)
+                                :else (str %)))))
+                     (str %)) grades))
+
+;; (if (= "5" ones)
+;;   (str left_num ones)
+;;   (str (+ left_num 1))) 
+;; (when-let [ones (cond
+;;                 (or (= val_str "3") (= val_str "4")) "5"
+;;                 (or (= val_str "8") (= val_str "9")) "0"
+;;                 :else val_str)]
+;;   (str (if (= "5" ones) 
+;;          tens2
+;;          (str (+ tens2 1))) ones))
 
