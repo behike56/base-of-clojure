@@ -1,6 +1,7 @@
 (ns base-of-clojure.Playground
   (:require
-   [base-of-clojure.algorythm.WarmupLvl :as wul]))
+   [base-of-clojure.algorythm.WarmupLvl :as wul]
+   [clojure.set :as set]))
 
 ;; 入力値
 (def array [1 3 5 7 9 11 13])
@@ -40,7 +41,37 @@
 (def grades2 [80])
 (wul/gradingStudents grades2)
 
+; 6644 5868 8349 3477
 
+; x1   v1   x2   v2
+; 4523 8092 9419 8076
+; 1113  612 1331  610
+; 2081 8403 9107 8400
+; 1928 4306 5763 4301
+; 1571 4240 9023 4234
+(wul/kangaroo 4523 8092 9419 8076)
+(wul/kangaroo 1113  612 1331  610)
+(wul/kangaroo 2081 8403 9107 8400)
+(wul/kangaroo 1928 4306 5763 4301)
+(wul/kangaroo 1571 4240 9023 4234)
+
+
+(empty? (seq (set/intersection (set (range 0 10 3)) (set (range 4 10 2)))))
+(empty? (seq (set/intersection (set (range 0 10 2)) (set (range 5 10 3)))))
+
+
+(for [i (range 0 )]
+  (if (= (nth (range 0 20 3) i) (nth (range 4 20 2) i))
+    "YES"
+    "NO"))
+
+
+(range 0 20 3)
+(range 4 20 2)
+
+(set/intersection (set (range 0 10 2)) (set (range 5 10 3)))
+(range 0 10 2)
+(range 5 10 3)
 ;; ビルトイン関数の動作確認
 (doseq [x array]
   (println x))
@@ -201,3 +232,16 @@
 ;;          tens2
 ;;          (str (+ tens2 1))) ones))
 
+;; 0 3 4 2
+(map (range 0 100 3))
+(range 4 100 2)
+
+
+
+(def list1 '(1 2 3 4 5))
+(def list2 '(4 5 6 7 8))
+
+(defn has-common-elements? [lst1 lst2]
+  (not (empty? (set/intersection (set lst1) (set lst2)))))
+
+(println (has-common-elements? list1 list2))  ;; true

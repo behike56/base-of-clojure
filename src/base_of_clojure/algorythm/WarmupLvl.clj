@@ -1,4 +1,5 @@
-(ns base-of-clojure.algorythm.WarmupLvl)
+(ns base-of-clojure.algorythm.WarmupLvl
+  (:require [clojure.set :as set]))
 
 (defn sharpcase
   "底辺と高さはともにnに等しく、#記号と空白を使って描かれる。
@@ -98,3 +99,26 @@
                      (= ones "0") (str (+ left_num 1) ones)
                      :else (str %)))))
           (str %)) grades))
+
+(defn kangaroo
+  "あなたは様々な動物を使ったサーカスショーの振り付けをしている。
+   ある演技のために、あなたは数直線上に2頭のカンガルーを用意し、
+   正の方向（すなわち正の無限大の方向）にジャンプできるようにする。
+   
+   最初のカンガルーはx1の位置からスタートし、ジャンプ1回につきv1メートルの速度で移動する。
+   2番目のカンガルーはx2の位置からスタートし、ジャンプ1回につきv2メートルの速度で移動する。
+   あなたはショーの一部として、2頭のカンガルーを同時に同じ場所に連れてくる方法を考えなければなりません。
+   可能であればYESを、そうでなければNOを返してください。
+   
+   Args
+   x1: int, v1: int, x2: int, v2: int
+
+   Returns
+   string: either YES or NO"
+  [x1 v1 x2 v2]
+  (let [list_1 (range x1 (* v1 100000) v1)
+        list_2 (range x2 (* v2 100000) v2)]
+    (if (some true? (map = list_1 list_2))
+      "YES"
+      "NO")))
+  
