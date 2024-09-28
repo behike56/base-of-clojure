@@ -143,7 +143,7 @@
 (count (filter #(= % 9) array2))
 
 
-(let [[_ hour min sec period] (re-matches #"(\d{2}):(\d{2}):(\d{2})(AM|PM)" time-str)])
+;; (let [[_ hour min sec period] (re-matches #"(\d{2}):(\d{2}):(\d{2})(AM|PM)" time-str)])
 
 
 (Integer/parseInt "33")
@@ -233,7 +233,7 @@
 ;;          (str (+ tens2 1))) ones))
 
 ;; 0 3 4 2
-(map (range 0 100 3))
+;;(map (range 0 100 3))
 (range 4 100 2)
 
 

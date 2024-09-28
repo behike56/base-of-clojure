@@ -16,8 +16,9 @@
   (recur (inc i)))
 
 (loop [i 0]  ;; 1. ループの初期値として i = 0 を設定
-  (when (< i 5)  ;; 2. i が 5 未満なら true で、処理を継続
-    (recur (inc i))))  ;; 3. i をインクリメントし、再帰的に再評価
+  (when (< i 5);; 2. i が 5 未満なら true で、処理を継続
+    (println i)
+    (recur (inc i))));; 3. i をインクリメントし、再帰的に再評価
 
 (for [i (range 5)]
   (println i))
