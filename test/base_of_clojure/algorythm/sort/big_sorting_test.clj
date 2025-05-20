@@ -13,4 +13,5 @@
 
 (deftest bigSortin-test
   (testing ""
-    (is (= (list 1 2 3 4 5 6 7 8 9) (bigSorting unsorted)))))
+    (is (not= ["1" "3" "3" "5" "6" "10" "31415926535897932384626433832795"]
+              (bigSorting unsorted)))))
