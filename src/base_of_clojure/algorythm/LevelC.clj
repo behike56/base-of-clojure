@@ -157,12 +157,12 @@
    ただし、数値の間には半角スペースを、各行の末尾には、半角スペースの代わりに改行を入れてください。"
   []
   (let [result (map (fn [x]
-         (map (fn [y]
-                (* x y))
-              (range 1 10)))
-       (range 1 10))]
-  (doseq [num result]
-    (println (str/join " " num)))))
+                      (map (fn [y]
+                             (* x y))
+                           (range 1 10)))
+                    (range 1 10))]
+    (doseq [num result]
+      (println (str/join " " num)))))
 
 (defn two_dim_array_boss
   "自然数 N が入力されます。N 行 N 列の九九表を出力してください。
@@ -170,9 +170,26 @@
   []
   (let [n (Integer/parseInt (read-line))
         result (map (fn [x]
-                    (map (fn [y]
-                           (* x y))
-                         (range 1 (+ n 1))))
-                  (range 1 (+ n 1)))]
-  (doseq [num result]
-    (println (str/join " " num)))))
+                      (map (fn [y]
+                             (* x y))
+                           (range 1 (+ n 1))))
+                    (range 1 (+ n 1)))]
+    (doseq [num result]
+      (println (str/join " " num)))))
+
+(defn variable_array_step1
+  []
+  (let [input (Integer/parseInt (read-line))
+        first-line (str/join " " (range 1 (+ (quot input 2) 1)))
+        second-line (str/join " "  (range  (+ (quot input 2) 1) (+ input 1)))]
+    (println first-line)
+    (println second-line)))
+
+(defn variable_array_step2
+  "(require '[clojure.string :as str])"
+  []
+  (let [input (read-line)
+        str-list (str/split input #" ")]
+    (println (str/join " " (range 1 (+ (Integer/parseInt (first str-list)) 1))))
+    (println (str/join " " (range 1 (+ (Integer/parseInt (second str-list)) 1))))
+    ))
