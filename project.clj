@@ -7,4 +7,8 @@
                  [org.clojure/data.csv "1.0.0"]]
   :main base-of-clojure.core
   :resource-paths ["resources"]
-  :repl-options {:init-ns base-of-clojure.core})
+  :repl-options {:init-ns base-of-clojure.core}
+  :profiles {:dev
+             {:dependencies [[lambdaisland/kaocha "1.91.1392"]]
+              :kaocha {:reporter :progress}}}
+  :aliases {"kaocha" ["run" "-m" "kaocha.runner"]})
