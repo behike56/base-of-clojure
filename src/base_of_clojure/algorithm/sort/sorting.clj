@@ -1,4 +1,4 @@
-(ns base-of-clojure.algorythm.sort.sorting)
+(ns base-of-clojure.algorithm.sort.sorting)
 
 (defn bigSorting
   "1 ~ 10^6の値を想定。

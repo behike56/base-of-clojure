@@ -1,4 +1,4 @@
-(ns base-of-clojure.algorythm.search.brute-force-search
+(ns base-of-clojure.algorithm.search.brute-force-search
   "全検索
    定義
    全探索（Brute-Force Search）は、解の候補となり得るすべてのパターン・組み合わせを列挙し、条件を満たすかを順に調べる手法です。

@@ -1,4 +1,4 @@
-(ns base-of-clojure.algorythm.search.search-in-strings
+(ns base-of-clojure.algorithm.search.search-in-strings
   "文字列に対する検索")
 
 ;; 1. filter と count を使う方法
